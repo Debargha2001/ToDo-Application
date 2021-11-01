@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+}
+
+#task-submission{
+    width: 70%;
+    margin: auto;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.label{
+    margin-bottom: 5px;
+}
+
+.col{
+    padding: 1px;
+}
+

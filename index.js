@@ -3,7 +3,10 @@ const app = express();
 const port = 8000;
 
 // use express router
+const db = require('./config/mongoose');
+const Task = require('./models/task');
 app.use('/',require('./routes'));
+app.use(express.static('assets'));
 
 // set up ejs as the view engine
 app.set('view engine', 'ejs');
