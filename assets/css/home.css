@@ -1,6 +1,33 @@
 body{
     margin: 0;
 }
+/* styling the heading section */
+#head{
+    background-image: url("../images/theme2.jpg");
+    background-size: contain;
+    height: 40vh;
+}
+
+#heading{
+    text-align: center;
+    background: -webkit-linear-gradient(90deg,#006600, #00cc99, #009999);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#heading h1{
+    font-size: 75px;
+    padding-top: 30px;
+
+}
+
+/* styling the input form section */
+#tasks{
+    height: 100vh;
+    padding-top: 20px;
+    background: linear-gradient(45deg,#006600, #00cc99, #009999);
+}
 
 #task-submission{
     width: 70%;
