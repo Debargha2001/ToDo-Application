@@ -5,7 +5,11 @@ const port = 8000;
 // use express router
 const db = require('./config/mongoose');
 const Task = require('./models/task');
+// middleware to parse incoming encodedd requests
+app.use(express.urlencoded());
+// use express routers
 app.use('/',require('./routes'));
+// use static files
 app.use(express.static('assets'));
 
 // set up ejs as the view engine
