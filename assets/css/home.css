@@ -46,3 +46,56 @@ body{
     padding: 1px;
 }
 
+/* adding styles to add and delete buttons */
+#add-del-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+#add-task{
+    margin: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #00cc99;
+    border-radius: 50px 50px;
+    background-color: #009999;
+    color: #fff;
+    width: 200px;
+    transition-duration: 0.5s;
+}
+
+#add-task:hover{
+    box-shadow: 0 0 3px 3px #008066;
+    transform: scale(1.1);
+}
+
+#del-task{
+    margin: 25px;
+    padding: 15px;
+    padding-left: 18px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #00cc99;
+    border-radius: 50px 50px;
+    background-color: #ff4d4d;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+#del-task:hover{
+    box-shadow: 0 0 3px 3px #008066;
+    transform: scale(1.1);
+}
+
+#del-task a{
+    text-decoration: none;
+    color: #111;
+    text-align: center;
+}
+
