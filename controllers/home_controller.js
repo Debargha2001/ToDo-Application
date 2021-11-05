@@ -1,5 +1,4 @@
 const Task = require('../models/task')
-const Contact = require('../models/task')
 module.exports.home = function(req,res){
     Task.find({},function(err,tasks){
         if(err){
@@ -11,5 +10,18 @@ module.exports.home = function(req,res){
             title: "To-Do Application",
             tasks_list: tasks
         })
+    });
+}
+
+// controller for create tast
+module.exports.createTask = function(req,res){
+    Task.create(req.body,function(err,newTask){
+        if(err){
+            console.log(`Error in creating contact: ${err}`);
+            return;
+        }
+
+        console.log(`New Task Created: ${newTask}`);
+        return res.redirect('back');
     });
 }

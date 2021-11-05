@@ -35,7 +35,7 @@
     <!-- form for taking input of task details -->
     <section id="tasks">
         <div id="task-submission">
-            <form action="" method="post" class="flex flex-direction-column">
+            <form action="/create-task" method="post" class="flex flex-direction-column">
                 <div class="form-group">
                     <div class="label">
                         <label for="description">Task Description</label>
@@ -53,20 +53,20 @@
                         <div>
                             <select name="category" aria-label="Default select example" class="form-select">
                                 <option selected>Choose a category</option>
-                                <option value="1">Personal</option>
-                                <option value="2">Work</option>
-                                <option value="3">School</option>
-                                <option value="4">Cleaning</option>
-                                <option value="5">Other</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
                     <div class="col">
                         <div class="label">
-                            <label for="date">Due Date</label>
+                            <label for="dueDate">Due Date</label>
                         </div>
                         <div>
-                            <input class="form-control" type="date">
+                            <input name="dueDate" class="form-control" type="date">
                         </div>
                     </div>
                 </div>
@@ -82,6 +82,8 @@
                 </div>
             </form>
         </div>
+
+
 
     </section>
 
