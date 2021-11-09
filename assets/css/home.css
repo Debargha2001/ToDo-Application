@@ -6,6 +6,7 @@ body{
     background-image: url("../images/theme2.jpg");
     background-size: contain;
     height: 40vh;
+    
 }
 
 #heading{
@@ -24,8 +25,9 @@ body{
 
 /* styling the input form section */
 #tasks{
-    height: 100vh;
+    height: 100%;
     padding-top: 20px;
+    padding-bottom: 20px;
     background: linear-gradient(45deg,#006600, #00cc99, #009999);
 }
 
@@ -99,3 +101,59 @@ body{
     text-align: center;
 }
 
+/* styling task-list section */
+#task-list{
+    margin: auto;
+    width: 50%;
+    
+}
+
+.task-card{
+   display: flex;
+   height: 90px;
+   padding: 1rem;
+   color: seashell;
+   justify-content: space-around;
+   background-color: rgba(104, 92, 92, 0.095) !important;
+   border: 1px solid #ffffff9c;
+   transition-duration: 0.3s;
+}
+
+.task-card:hover{
+    box-shadow: 0 0 3px 3px #008066;
+    transform: scale(1.1);
+}
+
+.description-date-container{
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.checkboxes{
+    margin-right: 0.2rem;
+
+}
+
+.checkboxes>input[type=checkbox]{
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin-top: 0.6rem;
+}
+
+.description{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.task-date{
+    font-weight: bold;
+}
+
+.category{
+    /* width: 6.5em; */
+    padding: 0.9rem;
+    text-align: center;
+    border-radius: 5%;
+}

@@ -8,7 +8,8 @@ module.exports.home = function(req,res){
 
         return res.render('home',{
             title: "To-Do Application",
-            tasks_list: tasks
+            tasks_list: tasks,
+            months: ['Jan','FEB','MARCH','APRIL','MAY','JUN','JUL','AUG','SEPT','OCT','NOV','DEC']
         })
     });
 }

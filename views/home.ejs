@@ -83,10 +83,30 @@
             </form>
         </div>
 
+        <!-- Displaying the task list -->
+        <div id="task-list">
+            <% for(let i of tasks_list){ %>
+                <div class="task-card">
+                    <div class="checkboxes"><input type="checkbox"></div>
+                    <div class="description-date-container">
+                        <div class="description"><%= i.description %></div>
+                        <div class="task-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <% d=new Date(i.dueDate) %>
+                            <span><%= months[d.getMonth()] %> <%= d.getDate() %>, <%= d.getFullYear() %></span>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h5><%= i.category %></h5>
+                    </div>
+                </div>
+                <!-- <hr> -->
+            <%}%>
+        </div>
 
 
     </section>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
