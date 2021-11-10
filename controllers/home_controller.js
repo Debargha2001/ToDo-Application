@@ -26,3 +26,15 @@ module.exports.createTask = function(req,res){
         return res.redirect('back');
     });
 }
+
+// controller for deleting task
+module.exports.deleteTasks = function(req,res){
+    Task.deleteMany({_id:{$in:req.body.checked}},function(err,deletedTasks){
+        if(err){
+            console.log(`Error deleting the tasks from database: ${err}`);
+            return;
+        }
+        console.log("Tasks deleted: ",deletedTasks);
+        res.redirect('back');
+    })
+}

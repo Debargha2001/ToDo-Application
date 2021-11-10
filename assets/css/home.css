@@ -27,7 +27,7 @@ body{
 #tasks{
     height: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 82px;
     background: linear-gradient(45deg,#006600, #00cc99, #009999);
 }
 
@@ -81,11 +81,12 @@ body{
     padding-left: 18px;
     box-sizing: border-box;
     font-size: 20px;
-    border: 1px solid #00cc99;
+    border: 1px solid #00664d;
     border-radius: 50px 50px;
     background-color: #ff4d4d;
-    color: #fff;
     width: 200px;
+    color: #111;
+    text-align: center;
     text-align: center;
     transition-duration: 0.5s;
 }
@@ -95,11 +96,7 @@ body{
     transform: scale(1.1);
 }
 
-#del-task a{
-    text-decoration: none;
-    color: #111;
-    text-align: center;
-}
+
 
 /* styling task-list section */
 #task-list{

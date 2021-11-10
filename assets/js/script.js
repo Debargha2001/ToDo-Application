@@ -10,4 +10,19 @@ const categoryColor = function(){
         category[i].style.backgroundColor = categoryColor[categoryName.indexOf(category[i].innerText)];
     }
 }
+// calling the function
 categoryColor();
+
+// adding eventListener for click event
+let deletetaskBtn = document.getElementById('del-task');
+deletetaskBtn.addEventListener('click',function(event){
+    let checked_boxes = document.querySelectorAll('input[type=checkbox]:checked');
+    let checked_boxs_arr = Array.from(checked_boxes);
+    let checked_ids = checked_boxs_arr.map(box => {
+        return box.getAttribute('value');
+    });
+    $.post('/delete-tasks',{checked:checked_ids},function(){
+        window.location.href='/';
+    });
+}); 
+
