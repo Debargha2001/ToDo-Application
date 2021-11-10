@@ -1,6 +1,6 @@
 let category=document.getElementsByClassName('category');
-
-
+let taskCards = document.getElementsByClassName('checkboxes');
+let description =document.getElementsByClassName('description');
 
 // assigning colors to the category of tasks
 const categoryColor = function(){
@@ -12,6 +12,20 @@ const categoryColor = function(){
 }
 // calling the function
 categoryColor();
+
+// function to add line-through to the checked tasks
+const strikeThrough = function(){
+    for(let i=0;i<taskCards.length;i++){
+        taskCards[i].addEventListener('click',function(){
+            if(taskCards[i].checked==true){
+                description[i].style.textDecoration = 'line-through';
+            }
+        });
+    }
+}
+
+// calling the function
+strikeThrough();
 
 // adding eventListener for click event
 let deletetaskBtn = document.getElementById('del-task');
