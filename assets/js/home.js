@@ -20,6 +20,7 @@ const filterTasks = function(){
     }
 
 }
+// add click event to filter task button
 document.getElementById("filter-btn-container").addEventListener('click',function(event){
     filterTasks();
 });
