@@ -82,6 +82,26 @@
             </form>
         </div>
 
+        <div id="filter-task">
+            
+            <div id="select-category">
+                <div>
+                    <label for="filtered-category">Filter Tasks</label>
+                </div>
+                <select name="filtered-category" aria-label="Default select example" class="form-select" id="filtered-category">
+                    <option selected>Select a category to filter tasks</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div id="filter-btn-container">
+                <button id="filter-btn" type="button"><i class="fas fa-filter"></i> Filter Tasks</button>
+            </div>
+        </div>
+
         <!-- Displaying the task list -->
         <div id="task-list">
             <% for(let i of tasks_list){ %>

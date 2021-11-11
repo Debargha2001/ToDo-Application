@@ -2,6 +2,28 @@ let category=document.getElementsByClassName('category');
 let taskCards = document.getElementsByClassName('checkboxes');
 let description =document.getElementsByClassName('description');
 
+// fitering tasks based upon category
+const filterTasks = function(){
+    let selected,filter,cards;
+    selected = document.getElementById("filtered-category");
+    filter = selected.value;
+    cards = document.getElementsByClassName("task-card");
+    for(let i=0;i<cards.length;i++){
+        let category = cards[i].getElementsByClassName('category')[0];
+        console.log(category);
+        let textvalue = category.innerText;
+        if(textvalue.indexOf(filter) > -1){
+            cards[i].style.display = "";
+        }
+        else{
+            cards[i].style.display = "none";
+        }
+    }
+
+}
+document.getElementById("filter-btn-container").addEventListener('click',function(event){
+    filterTasks();
+});
 // assigning colors to the category of tasks
 const categoryColor = function(){
     let categoryName = ['Personal','Work','School','Cleaning','Other'];
